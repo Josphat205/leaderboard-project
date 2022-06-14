@@ -1,0 +1,66 @@
+
+body {
+  background-color: bisque;
+  font-family: 'Oswald', sans-serif;
+}
+
+h1,
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  width: 60%;
+  margin-top: 100px;
+  border: 3px solid black;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.table {
+  border: 2px solid black;
+  box-shadow: 1px 1px 2px 0 rgba(0, 0, 0, 1);
+}
+
+.table-title,
+.form-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+form input {
+  font-family: 'Satisfy', cursive;
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+
+button {
+  background-color: red;
+  outline: 1px solid black;
+  border: 2px solid black;
+  box-shadow: 10px 11px 3px -5px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 10px 11px 3px -5px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 10px 11px 3px -5px rgba(0, 0, 0, 1);
+}
+
+.title {
+  color: black;
+  font-weight: 600;
+}
