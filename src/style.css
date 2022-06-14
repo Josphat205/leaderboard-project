@@ -64,3 +64,22 @@ button {
   color: black;
   font-weight: 600;
 }
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
