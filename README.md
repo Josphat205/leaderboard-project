@@ -8,9 +8,9 @@ JAVASCRIPT<br />
 WEBPACK<br />
 
 ## **Getting Started**
-
-
 To get a local copy up and running follow these simple example steps.<br /> 
+## **Screenshot of the project** 
+![Leaderboard](/img/leaderboard.png)
 ## **Live demo** 
 Click here for  [@Live Demo]( https://josphat205.github.io/leaderboard-project/)
  
