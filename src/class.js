@@ -1,31 +1,34 @@
-export default class Leader {
-  // post score to leaderboard
-  static async PostLeader(url, data) {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
-    await response.json();
-  }
+// post score to leaderboard
+const list = document.getElementById('list');
+export const postLeader = async (url, data) => {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  });
+  await response.json();
+};
 
-  // get leaderboard result
-  static async GetLeader(url) {
-    const response = await fetch(url);
-    const data = await response.json();
-    data.result.map((item) => Leader.displayLeader(item));
-  }
-
-  // display leaderboard result
-  static displayLeader(item) {
-    const list = document.getElementById('list');
-    const listItem = document.createElement('tr');
-    listItem.innerHTML = `
+// display leaderboard result
+export const displayLeader = (data) => {
+  let output = '';
+  data.forEach((item) => {
+    output += `
+    <tr>
     <td>${item.user}</td>
     <td>${item.score}</td>
+    </tr>
     `;
-    list.appendChild(listItem);
-  }
-}
+    list.innerHTML = output;
+  });
+};
+
+// get leaderboard result
+export const getLeader = async (url) => {
+  const response = await fetch(url);
+  const data = await response.json();
+  const dataArray = data.result;
+  displayLeader(dataArray);
+};
