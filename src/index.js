@@ -1,13 +1,13 @@
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Leader from './class.js';
+import { postLeader, getLeader } from './class.js';
 
 // global variables
 const form = document.getElementById('form');
 const userName = document.getElementById('name');
 const userScore = document.getElementById('score');
 const refreshBtn = document.getElementById('refresh');
-const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/D580GhSGd5bJQQHSvK71/scores';
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/EXvQB9UHO7GsP9g0h3gV/scores';
 
 // get form data
 const getFormData = () => {
@@ -15,8 +15,7 @@ const getFormData = () => {
     user: userName.value,
     score: userScore.value,
   };
-  Leader.PostLeader(url, data);
-  Leader.displayLeader(data);
+  postLeader(url, data);
 };
 // clear field function
 const clearFields = () => {
@@ -29,12 +28,8 @@ form.addEventListener('submit', (e) => {
   getFormData();
   clearFields();
 });
-// add score to the leaderboard
-document.addEventListener('DOMContentLoaded', () => {
-  Leader.GetLeader(url);
-});
 
 // refesh page
 refreshBtn.addEventListener('click', () => {
-  window.location.reload();
+  getLeader(url);
 });
