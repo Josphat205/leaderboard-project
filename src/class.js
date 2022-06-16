@@ -14,6 +14,7 @@ export const postLeader = async (url, data) => {
 // display leaderboard result
 export const displayLeader = (data) => {
   let output = '';
+  if(data.length > 0) {
   data.forEach((item) => {
     output += `
     <tr>
@@ -23,6 +24,14 @@ export const displayLeader = (data) => {
     `;
     list.innerHTML = output;
   });
+  }else{
+    output += `
+    <tr>
+    <td>No Score found, Please Add scores</td>
+    </tr>
+    `;
+    list.innerHTML = output;
+  }
 };
 
 // get leaderboard result
