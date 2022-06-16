@@ -44,6 +44,22 @@ h1 {
   padding: 5px;
 }
 
+form {
+  position: relative;
+}
+
+.pop {
+  position: absolute;
+  top: -20%;
+  right: 5%;
+  width: 90%;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 2px 0 9px 6px rgba(0, 0, 0, 0.4);
+}
+
 form input {
   font-family: 'Satisfy', cursive;
   font-size: 20px;
