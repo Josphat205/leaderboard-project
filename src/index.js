@@ -1,6 +1,6 @@
 import './style.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { postLeader, getLeader } from './class.js';
+import { postLeader, getLeader, alertMessage } from './class.js';
 
 // global variables
 const form = document.getElementById('form');
@@ -15,7 +15,13 @@ const getFormData = () => {
     user: userName.value,
     score: userScore.value,
   };
-  postLeader(url, data);
+  if (data.user === '' || data.score === '') {
+    alertMessage('Please fill in all fields', 'bg-danger');
+  } else {
+    postLeader(url, data);
+    clearFields();
+    alertMessage('Score Added successfully', 'bg-success');
+  }
 };
 // clear field function
 const clearFields = () => {
