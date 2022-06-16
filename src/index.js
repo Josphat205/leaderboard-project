@@ -7,7 +7,7 @@ const form = document.getElementById('form');
 const userName = document.getElementById('name');
 const userScore = document.getElementById('score');
 const refreshBtn = document.getElementById('refresh');
-const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/EXvQB9UHO7GsP9g0h3gV/scores';
+const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/pjHboadpOkT4ruajF2JF/scores';
 
 // get form data
 const getFormData = () => {
