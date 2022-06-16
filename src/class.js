@@ -14,17 +14,17 @@ export const postLeader = async (url, data) => {
 // display leaderboard result
 export const displayLeader = (data) => {
   let output = '';
-  if(data.length > 0) {
-  data.forEach((item) => {
-    output += `
+  if (data.length > 0) {
+    data.forEach((item) => {
+      output += `
     <tr>
     <td>${item.user}</td>
     <td>${item.score}</td>
     </tr>
     `;
-    list.innerHTML = output;
-  });
-  }else{
+      list.innerHTML = output;
+    });
+  } else {
     output += `
     <tr>
     <td>No Score found, Please Add scores</td>
@@ -40,4 +40,21 @@ export const getLeader = async (url) => {
   const data = await response.json();
   const dataArray = data.result;
   displayLeader(dataArray);
+};
+
+export const alertMessage = (message, className) => {
+  // add classname
+  const div = document.createElement('div');
+  div.className = `pop ${className}`;
+  // add text
+  div.appendChild(document.createTextNode(message));
+  // get parent
+  const form = document.querySelector('#form');
+  const container = form.firstElementChild;
+  form.insertBefore(div, container);
+  // remove after 3 seconds
+  setTimeout(() => {
+    document.querySelector('.pop').remove();
+  },
+  3000);
 };
