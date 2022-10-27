@@ -12,7 +12,7 @@ To get a local copy up and running follow these simple example steps.<br />
 ## **Screenshot of the project** 
 ![Leaderboard](/img/leaderboard.png)
 ## **Live demo** 
-Click here for  [@Live Demo]( https://josphat205.github.io/leaderboard-project/)
+Click here for  [@Live Demo]( https://magical-gecko-e34c3a.netlify.app/)
  
 
 ## **Usage**
